@@ -1,31 +1,29 @@
+function getDiaSemanaTexto(diaSemana) {
+    let diaSemanaTexto;
+
+    switch (diaSemana) {
+        case 0:
+            return diaSemanaTexto = 'Domingo';
+        case 1:
+            return diaSemanaTexto = 'Segunda-Feira';
+        case 2:
+            return diaSemanaTexto = 'Terça-Feira';
+        case 3:            
+            return diaSemanaTexto = 'Quarta-Feira';
+        case 4:            
+            return diaSemanaTexto = 'Quinta-Feira';
+        case 5:           
+            return  diaSemanaTexto = 'Sexta-Feira';
+        case 6:            
+            return diaSemanaTexto = 'Sábado';
+        default:
+            diaSemanaTexto = '';
+    }
+}
+
 const data = new Date();
 const diaSemana = data.getDay();
-let diaSemanaTexto;
 
-switch (diaSemana) {
-    case 0:
-        diaSemanaTexto = 'Domingo';
-        break;
-    case 1:
-        diaSemanaTexto = 'Segunda-Feira';
-        break;
-    case 2:
-        diaSemanaTexto = 'Terça-Feira';
-        break;
-    case 3:
-        diaSemanaTexto = 'Quarta-Feira';
-        break;
-    case 4:
-        diaSemanaTexto = 'Quinta-Feira';
-        break;
-    case 5:
-        diaSemanaTexto = 'Sexta-Feira';
-        break;
-    case 6:
-        diaSemanaTexto = 'Sábado';
-        break;
-    default:
-        diaSemanaTexto = '';
-}
+const diaSemanaTexto = getDiaSemanaTexto(diaSemana);
 
 console.log(`É ${diaSemanaTexto}`);
